@@ -34,7 +34,6 @@ body {
   margin: 0 auto 0;
 }
 
-/*.add-item__task-input {*/
 .task__entry-field {
   width: 56%;
   display: inline-block;
@@ -45,21 +44,23 @@ body {
   display: flex;
 }
 
-ul {
+.incomplete-tasks__list,
+.completed-tasks__list {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+.incomplete-tasks__title,
+.completed-tasks__title,
+.tasks__item {
   list-style: none;
 }
-
+/*------*/
 input,
 button {
   outline: none;
 }
-
+/*-------*/
 button {
   background: none;
   border: 0px;
@@ -69,12 +70,12 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-
+/*-------*/
 button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-
+/*--------*/
 h3,
 label[for="new-task"] {
   color: #333;
@@ -86,7 +87,6 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-/*input[type="text"] {*/
 .task__entry-field {
   margin: 0;
   font-size: 18px;
@@ -100,33 +100,35 @@ label[for="new-task"] {
   color: #888;
 }
 
-  .task__entry-field {
+.task__entry-field {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.add-item__title-wrapper .add-item__title {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+
+.add-item__wrapper .task__entry-field {
   width: 318px;
 }
-/* Было  p > button:hover { */
+/* ------- */
 button:hover {
   color: #0fc57c;
 }
 
 /* Task list */
+/*--------*/
 li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+/*---------*/
 li > * {
   vertical-align: middle;
 }
@@ -142,6 +144,7 @@ li > label {
   font-size: 18px;
   width: 226px;
 }
+/*--------*/
 li > input[type="text"] {
   width: 226px;
 }
@@ -150,21 +153,17 @@ li > input[type="text"] {
   color: #cf2323;
 }
 
-/*.button--delete-item img {*/
 .button--delete-item .delete-item__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-/*.button--delete-item img:hover {*/
 .button--delete-item .delete-item__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-/* Было ul#completed-tasks__list label { */
-/*.completed-tasks__list label {*/
 .completed-tasks__list .task__name {
   text-decoration: line-through;
   color: #888;
@@ -172,16 +171,15 @@ li > input[type="text"] {
 
 /* Edit Task */
 ul li input[type=text] {
+/*.task__item.task__entry-field { */
   display: none;
 }
-/* Было ul li.edit-mode input[type=text] { */
-/*.edit-mode input[type=text] {*/
+
 .edit-mode .task__entry-field {
   display: inline-block;
   width: 224px;
 }
-/* Было ul li.edit-mode label { */
-/*.edit-mode label {*/
+
 .edit-mode .add-item__title,
 .edit-mode .task__name {
   display: none;
