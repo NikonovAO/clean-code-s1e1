@@ -4,57 +4,62 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-/* Было .aaa {*/
+
 .banner {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-/* Было .aaa img {*/
-.banner img {
+
+.banner .banner__img {
   width: 100%;
 }
-/* Было .aaa .more_inf {*/
+
 .banner .banner__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .banner { 
+  .banner {
     text-align: center;
   }
 
 }
-/* Было .centered-main-page-element {*/
+
 .main-wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-/* Было .task { {*/
-.add-item__task-input {
+
+/*.add-item__task-input {*/
+.task__entry-field {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-/* Было .task-row-wrapper { {*/
+
 .add-item__wrapper {
   display: flex;
 }
+
 ul {
   margin: 0;
   padding: 0px;
 }
-li, 
+
+li,
 h3 {
   list-style: none;
 }
+
 input,
-button{
+button {
   outline: none;
 }
+
 button {
   background: none;
   border: 0px;
@@ -64,10 +69,12 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 button:hover {
   color: #3a3a3a;
 }
 /* Heading */
+
 h3,
 label[for="new-task"] {
   color: #333;
@@ -78,7 +85,9 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+
+/*input[type="text"] {*/
+.task__entry-field {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -90,7 +99,9 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+
+/*input[type="text"]:focus {*/
+  .task__entry-field {
   color: #333;
 }
 
@@ -120,8 +131,8 @@ li {
 li > * {
   vertical-align: middle;
 }
-/* Было li > input[type="checkbox"] { */
-.checkbox {
+
+.task__checkbox {
   margin: 0 10px;
 }
 /* Было li > label { */
@@ -135,18 +146,18 @@ li > label {
 li > input[type="text"] {
   width: 226px;
 }
-/* Было li > button.button__delete-item:hover { */
-.button__delete-item:hover {
+
+.button--delete-item:hover {
   color: #cf2323;
 }
-/* Было button.button__delete-item img { */
-.button__delete-item img {
+
+.button--delete-item img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-/* Было button.button__delete-item img:hover { */
-.button__delete-item img:hover {
+
+.button--delete-item img:hover {
   transform: rotateZ(0);
 }
 
