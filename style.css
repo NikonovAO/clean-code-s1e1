@@ -97,7 +97,8 @@ label[for="new-task"] {
 input#new-task {
   width: 318px;
 }
-p > button:hover {
+/* Было  p > button:hover { */
+button:hover {
   color: #0fc57c;
 }
 
@@ -114,10 +115,12 @@ li {
 li > * {
   vertical-align: middle;
 }
-
-li > input[type="checkbox"] {
+/* Было li > input[type="checkbox"] { */
+.checkbox {
   margin: 0 10px;
 }
+/* Было li > label { */
+/*.add-item__title .task{*/
 li > label {
   padding-left: 10px;
   box-sizing: border-box;
@@ -127,20 +130,24 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-li > button.button__delete-item:hover {
+/* Было li > button.button__delete-item:hover { */
+.button__delete-item:hover {
   color: #cf2323;
 }
-button.button__delete-item img {
+/* Было button.button__delete-item img { */
+.button__delete-item img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.button__delete-item img:hover {
+/* Было button.button__delete-item img:hover { */
+.button__delete-item img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks__list label {
+/* Было ul#completed-tasks__list label { */
+.completed-tasks__list label {
   text-decoration: line-through
   color: #888;
 }
@@ -149,12 +156,12 @@ ul#completed-tasks__list label {
 ul li input[type=text] {
   display:none
 }
-
-ul li.edit-mode input[type=text] {
+/* Было ul li.edit-mode input[type=text] { */
+.edit-mode input[type=text] {
   display:inline-block;
   width:224px
 }
-
-ul li.edit-mode label {
+/* Было ul li.edit-mode label { */
+.edit-mode label {
   display:none;
 }
