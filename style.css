@@ -55,13 +55,22 @@ body {
 .tasks__item {
   list-style: none;
 }
-/*------*/
-input,
-button {
+/*------*/    /*!!!!!!!!!!!!!!!*/
+/*input,
+button {*/
+.task__entry-field,
+.task__checkbox,
+.task__entry-field,
+.button--add-item,
+.button--edit-item,
+.button--delete-item {
   outline: none;
 }
-/*-------*/
-button {
+/*-------*/   /*!!!!!!!!!!!!!!!*/
+/*button {*/
+.button--add-item,
+.button--edit-item,
+.button--delete-item {
   background: none;
   border: 0px;
   color: #888;
@@ -70,14 +79,20 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-/*-------*/
-button:hover {
+/*-------*/   /*!!!!!!!!!!!!!!!*/
+/*button:hover {*/
+.button--add-item:hover,
+.button--edit-item:hover,
+.button--delete-item:hover {
   color: #3a3a3a;
 }
 /* Heading */
 /*--------*/
-h3,
-label[for="new-task"] {
+/*h3,
+label[for="new-task"] {*/
+.add-item__title,
+.incomplete-tasks__title,
+.completed-tasks__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -114,7 +129,10 @@ label[for="new-task"] {
   width: 318px;
 }
 /* ------- */
-button:hover {
+/*button:hover {*/
+.button--add-item:hover,
+.button--edit-item:hover,
+.button--delete-item:hover {
   color: #0fc57c;
 }
 
