@@ -55,9 +55,7 @@ body {
 .tasks__item {
   list-style: none;
 }
-/*------*/    /*!!!!!!!!!!!!!!!*/
-/*input,
-button {*/
+
 .task__entry-field,
 .task__checkbox,
 .task__entry-field,
@@ -66,8 +64,7 @@ button {*/
 .button--delete-item {
   outline: none;
 }
-/*-------*/   /*!!!!!!!!!!!!!!!*/
-/*button {*/
+
 .button--add-item,
 .button--edit-item,
 .button--delete-item {
@@ -79,17 +76,13 @@ button {*/
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-/*-------*/   /*!!!!!!!!!!!!!!!*/
-/*button:hover {*/
+
 .button--add-item:hover,
 .button--edit-item:hover,
 .button--delete-item:hover {
   color: #3a3a3a;
 }
-/* Heading */
-/*--------*/
-/*h3,
-label[for="new-task"] {*/
+
 .add-item__title,
 .incomplete-tasks__title,
 .completed-tasks__title {
@@ -128,8 +121,7 @@ label[for="new-task"] {*/
 .add-item__wrapper .task__entry-field {
   width: 318px;
 }
-/* ------- */
-/*button:hover {*/
+
 .button--add-item:hover,
 .button--edit-item:hover,
 .button--delete-item:hover {
@@ -154,16 +146,15 @@ li > * {
 .task__checkbox {
   margin: 0 10px;
 }
-/* Было li > label { */
-/*.add-item__title .task{*/
-li > label {
+
+.task__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-/*--------*/
-li > input[type="text"] {
+
+.task__entry-field {
   width: 226px;
 }
 
