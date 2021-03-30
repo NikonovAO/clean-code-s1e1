@@ -40,7 +40,7 @@ var createNewTaskElement=function(taskString){
     checkBox.className="task__checkbox";
     editInput.type="text";
     editInput.className="task__entry-field";
-
+    listItem.className="tasks__item";   //SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="button--edit-item";  //Было "edit"
 
@@ -102,7 +102,7 @@ var editTask=function(){
 
     //toggle .editmode on the parent.
     listItem.classList.toggle("edit-mode");  //было editMode
-    listItem.classList.toggle("tasks__item"); 
+    //listItem.classList.toggle("tasks__item"); 
 };
 
 

@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body-wrapper {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -129,8 +129,7 @@ body {
 }
 
 /* Task list */
-/*--------*/
-li {
+.tasks__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -138,8 +137,8 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-/*---------*/
-li > * {
+
+.tasks__item > * {
   vertical-align: middle;
 }
 
@@ -179,8 +178,7 @@ li > * {
 }
 
 /* Edit Task */
-ul li input[type=text] {
-/*.task__item.task__entry-field { */
+.tasks__item .task__entry-field {
   display: none;
 }
 
