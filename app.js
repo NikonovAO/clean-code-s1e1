@@ -69,7 +69,7 @@ var editTask = function () {
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem=this.parentNode;
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector("input[type=text]");
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".task__button-edit");
   var containsClass=listItem.classList.contains("task--edit-mode");
