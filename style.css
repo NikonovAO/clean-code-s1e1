@@ -145,7 +145,7 @@
   transition: transform 200ms ease-in;
 }
 
-.task__button-delete .task__button-delete:hover {
+.task__button-delete:hover .task__button-delete-img {
   transform: rotateZ(0);
 }
 
