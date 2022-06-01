@@ -9,9 +9,9 @@
 // Event handling, user interaction is what starts the code execution.
 
 const taskInput = document.getElementById('task-new__input');
-const addButton = document.getElementById('task__add');
-const incompleteTaskHolder = document.getElementById('task__incomplete');
-const completedTasksHolder = document.getElementById('task__completed');
+const addButton = document.getElementById('task-new__add');
+const incompleteTaskHolder = document.getElementById('task-incomplete__list');
+const completedTasksHolder = document.getElementById('task-complete__list');
 
 const createNewTaskElement = function(taskString) {
   const listItem = document.createElement('li');
@@ -22,21 +22,21 @@ const createNewTaskElement = function(taskString) {
   const deleteButton = document.createElement('button');
   const deleteButtonImg = document.createElement('img');
 
-  listItem.className = 'task__item';
+  listItem.className = 'task-item';
   label.innerText = taskString;
-  label.className = 'task__name';
+  label.className = 'task-item__name';
 
   checkBox.type = 'checkbox';
-  checkBox.className = 'task__mark-complete';
+  checkBox.className = 'task-item__mark-complete';
 
   editInput.type = 'text';
-  editInput.className = 'task__input task-incomplete__input';
+  editInput.className = 'task-input task-incomplete__input';
 
   editButton.innerText = 'Edit';
-  editButton.className = 'task__edit button';
+  editButton.className = 'task-item__edit todo-button';
 
-  deleteButton.className = 'task__delete button';
-  deleteButtonImg.className = 'task__delete-img';
+  deleteButton.className = 'task-item__delete todo-button';
+  deleteButtonImg.className = 'task-item__delete-img';
   deleteButtonImg.src = './remove.svg';
   deleteButtonImg.alt = 'delete';
   deleteButton.appendChild(deleteButtonImg);
@@ -63,10 +63,10 @@ const editTask = function() {
   console.log(`Change 'edit' to 'save'`);
 
   const listItem = this.parentNode;
-  const editInput = listItem.querySelector('.task__input');
-  const label = listItem.querySelector('.task__name');
-  const editBtn = listItem.querySelector('.task__edit');
-  const containsClass = listItem.classList.contains('task__item--edit');
+  const editInput = listItem.querySelector('.task-input');
+  const label = listItem.querySelector('.task-item__name');
+  const editBtn = listItem.querySelector('.task-item__edit');
+  const containsClass = listItem.classList.contains('task-item--edit');
 
   if (containsClass) {
     label.innerText = editInput.value;
@@ -76,7 +76,7 @@ const editTask = function() {
     editBtn.innerText = 'Save';
   }
 
-  listItem.classList.toggle('task__item--edit');
+  listItem.classList.toggle('task-item--edit');
 };
 
 const deleteTask = function() {
@@ -110,9 +110,9 @@ addButton.addEventListener('click', ajaxRequest);
 
 const bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
   console.log('bind list item events');
-  const checkBox = taskListItem.querySelector('.task__mark-complete');
-  const editButton = taskListItem.querySelector('.task__edit');
-  const deleteButton = taskListItem.querySelector('.task__delete');
+  const checkBox = taskListItem.querySelector('.task-item__mark-complete');
+  const editButton = taskListItem.querySelector('.task-item__edit');
+  const deleteButton = taskListItem.querySelector('.task-item__delete');
 
   editButton.onclick = editTask;
   deleteButton.onclick = deleteTask;
